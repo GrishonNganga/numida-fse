@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar-container {
+  display: flex;
+  align-items: center;
+}
+
+.welcome-text {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--foreground);
+}

@@ -1,0 +1,117 @@
+.loan-card {
+  background-color: white;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.loan-header {
+  display: flex;
+  cursor: pointer;
+}
+
+.loan-icon-container {
+  padding: 0.5rem;
+  background-color: var(--background);
+  border-radius: 9999px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loan-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--primary);
+  font-weight: 900;
+}
+
+.loan-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-left: 0.75rem;
+  flex-grow: 1;
+}
+
+.loan-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.loan-amount {
+  font-size: 1.125rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.loan-status {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.loan-actions {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.loan-status-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.loan-status-badge.on-time {
+  background-color: rgba(34, 197, 94, 0.1);
+  color: rgb(34, 197, 94);
+}
+
+.loan-status-badge.late {
+  background-color: rgba(234, 179, 8, 0.1);
+  color: rgb(234, 179, 8);
+}
+
+.loan-status-badge.defaulted {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: rgb(239, 68, 68);
+}
+
+.loan-status-badge.other {
+  background-color: rgba(107, 114, 128, 0.1);
+  color: rgb(107, 114, 128);
+}
+
+.loan-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 0.5rem;
+}
+
+.loan-details-icon-container {
+  height: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.loan-details-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--primary);
+    font-weight: 900;
+}
+
+.transactions-header {
+  font-weight: 600;
+  color: var(--muted-foreground);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

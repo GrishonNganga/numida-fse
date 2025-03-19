@@ -1,0 +1,54 @@
+.repayment-card {
+  background-color: var(--background);
+  padding: 0.8rem;
+  border-radius: 0.375rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.repayment-info {
+  display: flex;
+  gap: 0.5rem;
+  height: 100%;
+}
+
+.repayment-icon-container {
+  padding: 0.5rem;
+  background-color: white;
+  color: var(--primary);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.repayment-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.repayment-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.repayment-title {
+  font-weight: 500;
+}
+
+.repayment-date {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.repayment-amount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.repayment-amount-value {
+  font-weight: 500;
+} 

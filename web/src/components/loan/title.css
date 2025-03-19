@@ -1,0 +1,42 @@
+.title-container {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 66.666667%;
+}
+
+@media (min-width: 1024px) {
+  .search-container {
+    max-width: 24rem;
+  }
+}
+
+.search-input {
+  width: 100%;
+}
+
+.clear-search {
+  width: 1.5rem;
+  position: absolute;
+  right: 0.5rem;
+  cursor: pointer;
+}
+
+.search-icon {
+  width: 1.5rem;
+  cursor: pointer;
+} 

@@ -1,0 +1,22 @@
+*,
+::after,
+::before,
+::backdrop,
+::file-selector-button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0 solid;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+:root {
+  font-family: "Ubuntu", sans-serif;
+  --background: #f0f9ff;
+  --primary: #4080a6;
+  --secondary: #1BC9E8;
+  --muted-foreground: #545c61;
+  --border: #4080a6;
+  --radius: 0.5rem;
+}

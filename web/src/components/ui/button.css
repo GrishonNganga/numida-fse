@@ -1,0 +1,72 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border: 1px solid transparent;
+  outline: none;
+  background-color: var(--primary);
+  color: white;
+}
+
+.button:hover:not(:disabled) {
+  background-color: var(--secondary);
+}
+
+.button:active:not(:disabled) {
+  background-color: var(--secondary);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Loading state */
+.button-loading {
+  position: relative;
+  color: transparent;
+}
+
+.button-loading .spinner {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.button svg {
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.button svg:not([class*='size-']) {
+  width: 1rem;
+  height: 1rem;
+}
+
+.button:has(> svg) {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
