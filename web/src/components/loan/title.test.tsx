@@ -58,7 +58,7 @@ describe('Title Component', () => {
   });
 
   it('renders with correct CSS classes', () => {
-    render(<Title />);
+    render(<Title searchFilter="" setSearchFilter={mockSetSearchFilter} />);
     
     // Check container class
     const container = screen.getByText('Loans').parentElement?.parentElement;

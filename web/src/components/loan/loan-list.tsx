@@ -3,18 +3,18 @@ import LoanCard from "./loan-card";
 import LoanCardSkeleton from "./loan-card-skeleton";
 import AddTransactionModal from "./add-transaction-modal";
 import "./loan-list.css";
-import { ExistingLoan } from "@/__generated__/graphql";
+import { Loan } from "@/types";
 
 const LoanList = ({
   loans,
   refetch,
   isLoading,
 }: {
-  loans: ExistingLoan[];
+  loans: Loan[];
   refetch: () => void;
   isLoading?: boolean;
 }) => {
-  const [selectedLoan, setSelectedLoan] = useState<ExistingLoan | null>(null);
+  const [selectedLoan, setSelectedLoan] = useState<Loan | null>(null);
   const [addTransactionModalOpen, setAddTransactionModalOpen] = useState(false);
 
   if (isLoading) {

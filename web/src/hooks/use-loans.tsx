@@ -2,6 +2,7 @@ import { useQuery } from "@apollo/client";
 import { useMemo, useEffect, useState } from "react";
 import { GET_LOANS } from "@/services/graphql/loan";
 import { GetLoansQuery } from "@/__generated__/graphql";
+import { Loan } from "@/types";
 
 export const useLoans = (searchFilter: string) => {
   const [debouncedFilter, setDebouncedFilter] = useState(searchFilter);
@@ -15,19 +16,31 @@ export const useLoans = (searchFilter: string) => {
   }, [searchFilter]);
 
   const { data, loading, refetch } = useQuery<GetLoansQuery>(GET_LOANS, {
-    variables: { 
-      filters: { 
+    variables: {
+      filters: {
         name: debouncedFilter,
       },
     },
   });
 
-  const getPaymentInfo = (payments: ({ __typename?: "LoanPayment"; id: string; paymentDate: string; amount?: number | null } | null)[] | null | undefined) => {
+  const getPaymentInfo = (
+    payments:
+      | ({
+          __typename?: "LoanPayment";
+          id: string;
+          paymentDate: string;
+          amount?: number | null;
+        } | null)[]
+      | null
+      | undefined
+  ) => {
     if (!payments?.length)
       return { status: "Unpaid", daysOverdue: 0, totalPaid: 0 };
 
     const latestPayment = new Date(
-      Math.max(...payments.map((p) => p ? new Date(p.paymentDate).getTime() : 0))
+      Math.max(
+        ...payments.map((p) => (p ? new Date(p.paymentDate).getTime() : 0))
+      )
     );
     const daysSincePayment = Math.floor(
       (new Date().getTime() - latestPayment.getTime()) / (1000 * 60 * 60 * 24)
@@ -63,7 +76,7 @@ export const useLoans = (searchFilter: string) => {
                   new Date(a?.paymentDate).getTime()
               )
             : [],
-        };
+        } as Loan;
       }) || [],
     [data?.loans]
   );

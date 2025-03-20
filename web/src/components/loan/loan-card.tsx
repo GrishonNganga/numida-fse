@@ -3,15 +3,16 @@ import { formatCurrency } from "@/lib/utils";
 import RepaymentCard from "./repayment-card";
 import { Button } from "../ui/button";
 import "./loan-card.css";
-import { ExistingLoan } from "@/__generated__/graphql";
+import { Loan } from "@/types";
+
 const LoanCard = ({
   loan,
   setSelectedLoan,
   isSelected,
   setAddTransactionModalOpen,
 }: {
-  loan: ExistingLoan;
-  setSelectedLoan: (loan: ExistingLoan) => void;
+  loan: Loan;
+  setSelectedLoan: (loan: Loan | null) => void;
   isSelected: boolean;
   setAddTransactionModalOpen: (open: boolean) => void;
 }) => {

@@ -3,6 +3,7 @@ import { render, screen, fireEvent, cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import LoanCard from "./loan-card";
 import { formatCurrency } from "@/lib/utils";
+import { Loan } from "@/types";
 
 vi.mock("@/components/ui/badge", () => ({
   Badge: ({
@@ -38,7 +39,7 @@ vi.mock("./repayment-card", () => ({
     amount,
     paymentDate,
   }: {
-    id: number;
+    id: string;
     amount: number;
     paymentDate: string;
   }) => (
@@ -50,20 +51,21 @@ vi.mock("./repayment-card", () => ({
 }));
 
 describe("LoanCard Component", () => {
-  const mockLoan = {
+  const mockLoan: Loan = {
     id: "1",
     name: "Test Loan",
     principal: 10000,
     status: "On time",
     daysOverdue: 0,
-    dueDate: "2024-12-31",
-    interestRate: 5,
+    totalPaid: 0,
+    dueDate: "2024-03-19",
+    interestRate: 10,
     payments: [
       {
         id: "1",
         amount: 1000,
         paymentDate: "2024-03-19",
-        loanId: "1"
+        loanId: "1",
       },
     ],
   };
@@ -149,7 +151,7 @@ describe("LoanCard Component", () => {
     expect(screen.getByText("Transactions")).toBeInTheDocument();
     expect(screen.getByText("Add Transaction")).toBeInTheDocument();
     expect(
-      screen.getByTestId(`repayment-card-${mockLoan.payments[0].id}`)
+      screen.getByTestId(`repayment-card-${mockLoan.payments![0]!.id}`)
     ).toBeInTheDocument();
   });
 

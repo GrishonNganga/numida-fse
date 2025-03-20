@@ -62,6 +62,9 @@ describe("LoanList Component", () => {
       principal: 10000,
       status: "On time",
       daysOverdue: 0,
+      totalPaid: 0,
+      dueDate: "2024-03-19",
+      interestRate: 10,
       payments: [],
     },
     {
@@ -70,6 +73,9 @@ describe("LoanList Component", () => {
       principal: 20000,
       status: "Late",
       daysOverdue: 5,
+      totalPaid: 0,
+      dueDate: "2024-03-19",
+      interestRate: 10,
       payments: [],
     },
   ];
