@@ -4,7 +4,7 @@
 
 # Numida Full Stack Assessment Implementation
 
-### TLDR: Watch the [demo here]() or try the app [here](https://numida-fse.vercel.app)
+### TLDR: Watch the [demo here](https://drive.google.com/file/d/1ciIAoplWAX2VnSb50BoON4SnNm3T-pf3/view?usp=sharing) or try the app [here](https://numida-fse.vercel.app)
 
 This implementation focuses on creating a loan management system that displays and manages loan statuses effectively. The core functionality revolves around loan payment tracking and status visualization, with an emphasis on clean architecture and user experience.
 
