@@ -4,7 +4,7 @@
 
 # Numida Full Stack Assessment Implementation
 
-### TLDR: Watch the [demo here]()
+### TLDR: Watch the [demo here]() or try the app [here](https://numida-fse.vercel.app)
 
 This implementation focuses on creating a loan management system that displays and manages loan statuses effectively. The core functionality revolves around loan payment tracking and status visualization, with an emphasis on clean architecture and user experience.
 
@@ -12,7 +12,7 @@ This implementation focuses on creating a loan management system that displays a
 
 ### GraphQL Data Layer
 
-##### GraphQL endpoint at `localhost:2024/graphql`
+##### GraphQL endpoint at `https://numida-fse.onrender.com/graphql`
 
 - Get a list of all loan payments
   Query
@@ -111,7 +111,7 @@ This implementation focuses on creating a loan management system that displays a
 
 - RESTful API for creating a new payment for a specific loan
   ```bash
-  POST: http://localhost:2024/loans/<loan_id>/payments 
+  POST: https://numida-fse.onrender.com/loans/<loan_id>/payments 
   {
     amount: 100,
     date: "2025-03-13"
