@@ -8,6 +8,29 @@
 
 This implementation focuses on creating a loan management system that displays and manages loan statuses effectively. The core functionality revolves around loan payment tracking and status visualization, with an emphasis on clean architecture and user experience.
 
+## Deployment
+
+### Frontend Deployment (Vercel)
+The frontend of this application is deployed on Vercel. You can access it at:
+- **URL**: [https://numida-fse.vercel.app](https://numida-fse.vercel.app)
+- **Hosting Platform**: Vercel
+- **Deployment Method**: Automatic deployment from the `main` branch of the repository.
+- **How to Deploy Updates**:
+  1. Push changes to the `main` branch.
+  2. Vercel will automatically build and deploy the latest version.
+
+### Backend Deployment (Render)
+The backend is deployed on Render and is accessible via the following endpoint:
+- **GraphQL API URL**: [https://numida-fse.onrender.com/graphql](https://numida-fse.onrender.com/graphql)
+- **REST API URL**: [https://numida-fse.onrender.com](https://numida-fse.onrender.com)
+- **Hosting Platform**: Render
+- **Deployment Method**: Automatic deployment from the `main` branch.
+- **How to Deploy Updates**:
+  1. Push changes to the `main` branch.
+  2. Render will automatically detect the updates, build, and deploy the latest version.
+
+<span style="color:red">NOTE</span>: Render automatically shuts down application service after 10 mins of inactivity, so initial load might take a while before it restarts.
+
 ## Core Requirements Completed
 
 ### GraphQL Data Layer
